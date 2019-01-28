@@ -1,0 +1,29 @@
+<h2 class="detail-item">Personal Info</h2>
+<ul class="detail-item">
+  <li class="item-d"><b>Known For</b></li>
+  <li class="item-d">{{person?.known_for_department}}</li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Gender</b></li>
+  <li class="item-d">{{gender[person?.gender]}}</li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Known Credits</b></li>
+  <li class="item-d"> - </li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Birthday</b></li>
+  <li class="item-d">{{person?.birthday}}</li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Place of Birth</b></li>
+  <li class="item-d">{{person?.place_of_birth}}</li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Official Site</b></li>
+  <li class="item-d"> {{person?.homepage}}</li>
+</ul>
+<ul class="detail-item">
+  <li class="item-d"><b>Also Known As</b></li>
+  <li *ngFor="let known_as of person?.also_known_as" class="item-d">{{known_as}}</li>
+</ul>

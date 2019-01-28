@@ -1,0 +1,32 @@
+<div class="nav-social">
+  <div class="border-r">
+    <a href="#" class="social-link"><i class="fab fa-facebook-square fa-2x"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-twitter-square fa-2x"></i></a>
+    <a href="#" class="social-link "><i class="fab fa-instagram fa-2x"></i></a>
+  </div>
+  <a href="#" class="social-link"><i class="fas fa-link fa-2x"></i></a>
+</div>
+<div *ngIf="movie" id="movie_about" class="movie_about">
+  <p class="title-feature">Facts</p>
+  <p class="title-feature">Status</p>
+  <p class="item-feature">{{movie.status}}</p>
+  <p class="title-feature">Released Infomation</p>
+  <p class="item-feature">{{movie.release_date}}</p>
+  <p class="title-feature">Original Language</p>
+  <p class="item-feature">{{movie.original_language | uppercase}}</p>
+  <p class="title-feature">Runtime</p>
+  <p class="item-feature">{{movie.runtime}} minutes</p>
+  <p class="title-feature">Budget</p>
+  <p class="item-feature">${{movie.budget}}</p>
+  <p class="title-feature">Revenue</p>
+  <p class="item-feature">${{movie.revenue}}</p>
+  <p class="title-feature">Genres</p>
+  <div *ngIf="movie.genres">
+    <a *ngFor="let genres of movie.genres" href="#" class="genres-item">{{genres.name}}</a>
+  </div>
+  <p class="title-feature">KeyWord</p>
+</div>
+<div class="genres">
+  <a *ngFor="let keyword of key?.keywords" href="#" class="genres-item keyword-item">{{keyword.name}}</a>
+  <a *ngFor="let keyword of key?.results" href="#" class="genres-item keyword-item">{{keyword.name}}</a>
+</div>

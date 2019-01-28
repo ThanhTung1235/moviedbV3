@@ -1,0 +1,140 @@
+.movie-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 48%;
+  height: 278px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 9px;
+}
+
+.movie-card::after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.card-content {
+  overflow: hidden;
+  padding: 10px
+}
+
+.time {
+  color: #4d4d4d;
+  font-size: 13px
+}
+
+.movie-thumbnail {
+  float: left;
+  position: relative;
+}
+
+.sub {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  padding: 10px 0;
+  visibility: hidden;
+}
+
+.sub > i {
+  margin-left: 10px
+}
+
+.movie-thumbnail:hover .sub {
+  visibility: visible;
+}
+
+.movie-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: #081C24;
+}
+
+.movie-name a {
+  text-decoration: none;
+  color: #081C24;
+}
+
+.overview {
+  height: 145px;
+  overflow: hidden;
+  padding: 20px 0;
+  color: #4d4d4d;
+  font-size: 14px;
+}
+
+.more-info {
+  text-decoration: none;
+  color: black;
+  padding-top: 15px;
+  border-top: 1px solid #081C24;
+  margin-top: 40px
+}
+
+.more-info a {
+  text-decoration: none;
+  color: black
+}
+
+/* movie-card-sm */
+.movie-card-sm {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 40%;
+  display: none;
+  margin-top: 20px
+}
+
+.movie-card-sm a {
+  text-decoration: none;
+  color: black
+}
+
+.card-content-sm {
+  display: flex;
+  justify-content: start;
+  margin-left: 10px
+}
+
+.fake-percent {
+  margin-right: 10px
+}
+
+.movie-name-sm {
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+.time-sm {
+  font-size: 14px;
+  color: #4d4d4d
+}
+
+@media only screen and (max-width: 992px) {
+  /* Popular movie */
+  .movie-card {
+    display: none
+  }
+
+  .movie-card-sm {
+    display: inline-block;
+    width: 48%;
+    margin: 6px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .movie-card-sm {
+    width: auto;
+    margin: 10px;
+  }
+}
+
+

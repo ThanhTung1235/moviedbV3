@@ -1,0 +1,14 @@
+<main>
+  <div class="movie-page">
+    <div class="container">
+      <h2>Popular People</h2>
+      <div class="list_person">
+        <app-person-card [personResponse]="_personResponse"></app-person-card>
+      </div>
+      <div class="paginate-nav">
+        <ngb-pagination [collectionSize]="_personResponse?.total_pages * 10" (pageChange)="pageChanged($event)"
+                        [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+      </div>
+    </div>
+  </div>
+</main>

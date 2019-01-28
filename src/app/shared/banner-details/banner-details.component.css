@@ -1,0 +1,177 @@
+.detail-page {
+  position: relative;
+  margin-top: 65px;
+}
+
+.banner {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.intro {
+  padding: 29px 0;
+}
+
+.detail-header {
+  background-image: radial-gradient(circle at 20% 50%, rgba(12.94%, 14.90%, 22.75%, 0.98) 0%, rgba(12.94%, 14.90%, 22.75%, 0.88) 100%);
+  color: white;
+}
+
+.thumbnail-movie-dt {
+  border-radius: 8px
+}
+
+.media-dt {
+  padding-top: 20px
+}
+
+.media-dt .nav-item {
+  margin-right: 20px;
+}
+
+.media-action i {
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  padding: 13px
+}
+
+.media-action i:hover {
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  background: #fff;
+  color: black;
+  transition: ease-in-out 0.3s
+}
+
+.trailer {
+  text-decoration: none;
+  color: #fff
+}
+
+.trailer:hover {
+  opacity: 0.6;
+  transition: ease-in-out 0.3s
+}
+
+.overview-dt {
+  margin: 30px 0
+}
+
+.fearture-dt {
+  margin-top: 30px
+}
+
+.title-section {
+  margin: 10px 0
+}
+
+.item-section {
+  margin-top: 20px
+}
+
+/* detail-header-mb */
+.detail-header-mb {
+  display: none;
+}
+
+.banner-mb {
+  position: relative;
+}
+
+.poster {
+  position: absolute;
+  width: 26vw;
+  left: 0;
+  bottom: -20vw;
+  margin-left: 20px;
+  border-radius: 8px
+}
+
+.title-dt-mb {
+  background: #15171E;
+  margin-top: -5px;
+  min-height: calc(28vw + 20px);
+}
+
+.movie-dt-name {
+  padding-left: calc(26vw + 20px + 10px);
+  color: #fff;
+  min-height: calc(19vw + 20px);
+  padding-top: 4.6vw
+}
+
+.media-dt-mb {
+  display: flex;
+  justify-content: space-evenly
+}
+
+.percent-mb {
+  width: 140px;
+}
+
+.percent-fake {
+  width: 45px;
+  float: left;
+}
+
+.User-Score {
+  margin-top: 15px;
+  color: #fff
+}
+
+.trailer-mb a {
+  color: #fff;
+  text-decoration: none
+}
+
+.trailer-mb a .fa-play {
+  margin-top: 15px
+}
+
+.border {
+  box-sizing: border-box;
+  width: 1px;
+  height: 23px;;
+  background: #ffffff;
+  margin-top: 13px
+}
+
+.overview-mb {
+  background: #343C41;
+  padding: 30px 0;
+  color: #ffffff
+}
+
+.overview-mb .title-section, .overview-dt {
+  margin-top: 0;
+}
+
+.thumbnail-movie-dt img {
+  border-radius: 8px
+}
+@media only screen and (max-width: 992px) {
+  .detail-header {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .detail-header-mb {
+    display: block;
+  }
+}

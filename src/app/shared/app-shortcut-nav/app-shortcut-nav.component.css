@@ -1,0 +1,30 @@
+.shortcut-nav{
+  padding-top: 18px;
+  float: right;
+}
+.shortcut-nav .nav-item{
+  margin-right: 80px;
+}
+.shortcut-nav .nav-item:last-child{
+  margin-right: 0;
+}
+.shortcut-nav .nav-link{
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+}
+.nav-media{
+  border-top: 1px solid #D7D7D7;
+  border-bottom: 1px solid #D7D7D7;
+  height: 60px;
+}
+.nav-link{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-media{
+    display: none;
+  }
+}
+

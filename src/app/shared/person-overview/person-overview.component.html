@@ -1,0 +1,46 @@
+<div *ngIf="person" class="person">
+  <div class="container">
+    <div class="person-info-mb">
+      <div class="person-avatar-mb">
+        <img class="image-fluid" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2{{person.profile_path}}" alt="">
+      </div>
+      <div class="person-intro-mb">
+        <h2 class="person-name-mb">{{person.name}}</h2>
+        <div class="person-social-link">
+          <a href="#" class="person-social-mb"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#" class="person-social-mb"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a href="#" class="person-social-mb"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+      </div>
+      <div class="person-overview-mb">
+        <h3>Biography</h3>
+        <p>
+          {{person.biography}}
+        </p>
+      </div>
+    </div>
+    <div class="person-info">
+      <div class="person">
+        <div class="thumbnail-person">
+          <div class="person-avartar">
+            <img class="image-fluid avartar" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{person.profile_path}}" alt="">
+          </div>
+        </div>
+        <div class="intro-person">
+          <div class="person-intro">
+            <h2 class="person-name">{{person.name}}</h2>
+            <div class="person-social">
+              <a href="#" class="person-social-mb"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a href="#" class="person-social-mb"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a href="#" class="person-social-mb"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+          </div>
+          <div class="person-overview">
+            <b>Biography</b>
+            <p class="person-summary">{{person.biography}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

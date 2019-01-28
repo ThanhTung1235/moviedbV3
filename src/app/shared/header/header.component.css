@@ -1,0 +1,321 @@
+header {
+  background: #081C24;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.content-nav {
+  height: 115px;
+  padding: 10px 0;
+}
+
+.nav-item {
+  float: left;
+  list-style-type: none;
+}
+
+.nav::after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* mobile-nav */
+.mobile-logo {
+  width: 60px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.nav-m {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 15px 0;
+}
+
+.nav-m-item i {
+  color: #fff;
+  padding-top: 17px;
+  font-size: 20px;
+
+}
+
+/* small mn */
+.sub-small-mn::after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.small-mn {
+  float: right;
+}
+
+.small-mn .nav-item {
+  margin-right: 30px;
+}
+
+.small-mn .nav-link {
+  color: #868e91;
+  font-size: 12px;
+  font-weight: 300;
+
+}
+
+/* left-mn */
+.media-nav::after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+
+.left-mn {
+  float: left;
+}
+
+.left-mn .nav-item {
+  margin-right: 30px;
+  padding: 20px 0;
+}
+
+.left-mn .nav-link {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600
+}
+
+.logo {
+  width: 80px;
+  float: left;
+  margin-right: 30px;
+  list-style-type: none;
+}
+
+/* right-mn */
+.right-mn {
+  float: right;
+}
+
+.right-mn .nav-item {
+  margin-right: 30px;
+  padding: 20px 0;
+}
+
+.right-mn .nav-link {
+  text-transform: uppercase
+}
+
+.multi-language {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 12px
+}
+
+/* sub-menu */
+.sub-nav {
+  position: absolute;
+  display: none;
+  top: 60px
+}
+
+.left-mn .nav-item:hover .sub-nav {
+  display: block;
+}
+
+.sub-nav .nav-link {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #868e91;
+  font-weight: 400
+}
+/*menu mobile*/
+.menu-response {
+  background: rgba(8, 28, 36, .95);
+  position: fixed;
+  height: 100%;
+  width: 0;
+  padding: 0;
+  top: 80px;
+  transition: all 0.3s;
+  left: 0;
+}
+
+.menu-active {
+  width: 90%;
+  height: 100%;
+}
+
+.nav-mobile {
+  height: 100%;
+  padding: 10px 20px;
+}
+
+.nav-mobile-item {
+  margin-top: 10px;
+}
+
+.nav-small {
+  margin-top: 30px;
+}
+
+.text {
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.item-link {
+  color: #D7D7D7;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.small-item {
+  text-transform: capitalize;
+  font-weight: unset;
+  font-size: 15px;
+  color: #868E91;
+  text-decoration: none;
+
+}
+
+.sub-menu-mb li {
+  margin-top: 5px;
+}
+@media only screen and (max-width: 992px) {
+  .col-sm {
+    width: 100%;
+  }
+
+  .offset-whitespace {
+    height: 37px;
+  }
+
+  .trailer-item iframe {
+    width: 100%;
+  }
+
+  /*home*/
+  .home-page {
+    margin-top: 98px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .movie-image {
+    display: none;
+  }
+
+  .content-info {
+    width: 100%;
+  }
+
+  /*mobile-nav  */
+  .content-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  /* footer-nav */
+  footer {
+    background: linear-gradient(to top right, #2455a9, #00d573);
+    height: auto;
+  }
+
+  .logo-footer, .btn_user {
+    float: unset;
+  }
+
+  .logo-footer {
+    margin-bottom: 15px
+  }
+
+  .user-footer {
+    margin-bottom: 30px;
+  }
+
+  .item-title-ft {
+    margin: 10px 0;
+  }
+
+  /* detail header */
+  .detail-header {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .detail-header-mb {
+    display: block;
+  }
+
+  /* content-detail */
+  .white-col {
+    float: unset;
+    width: 100%;
+  }
+
+  .grey-col {
+    float: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .white-width {
+    float: unset;
+    max-width: 100%;
+
+  }
+
+  .grey-width {
+    max-width: 100%;
+  }
+
+  /*person detail*/
+  .person-info-mb {
+    display: block;
+  }
+
+  .person-info {
+    display: none;
+  }
+
+  .movie-list {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  /*person-popular*/
+  .person_card {
+    width: 30%;
+  }
+}

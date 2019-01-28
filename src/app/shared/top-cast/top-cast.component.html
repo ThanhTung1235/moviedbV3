@@ -1,0 +1,21 @@
+<h2>Top Billed Cast</h2>
+<div class="hide-scroll">
+  <div *ngIf="credits" class="cast-list">
+    <div *ngFor="let cast of credits.cast | slice:0:5" class="cast-card">
+      <a routerLink="/person/{{cast.id}}">
+        <div class="avatar-cast">
+          <img class="image-fluid" src="https://image.tmdb.org/t/p/w276_and_h350_face{{cast.profile_path}}"
+               alt="">
+        </div>
+        <div class="cast-info">
+          <p class="cast-name">
+            <b>{{cast.name}}</b>
+          </p>
+          <p class="role">
+            {{cast.character}}
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

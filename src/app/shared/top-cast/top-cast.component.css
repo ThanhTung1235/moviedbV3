@@ -1,0 +1,46 @@
+.cast-list {
+  overflow: auto;
+  /* padding: 20px 0; */
+  white-space: nowrap;
+}
+.hide-scroll {
+  overflow: hidden;
+  height: 270px;
+}
+
+.cast-card {
+  width: 140px;
+  margin-right: 10px;
+  margin-left: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  height: 250px;
+  display: inline-block;
+  margin-bottom: 20px
+}
+
+.cast-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.cast-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cast-info {
+  padding: 10px
+}
+
+.avatar-cast {
+  height: 160px;
+  overflow: hidden;
+}
+
+.role {
+  font-size: 14px;
+  color: #4d4d4d;
+  overflow: hidden;
+  text-overflow: ellipsis
+}

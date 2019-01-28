@@ -1,0 +1,49 @@
+.recommend-area {
+  padding: 20px 10px;
+}
+
+.recommendation {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.recommen-card {
+  width: 250px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.recommen-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.recommen-name {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.recommen-name p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.thumbnail-recommen {
+  position: relative;
+}
+
+.thumbnail-recommen:hover .sub-recommen {
+  visibility: visible;
+}
+
+.sub-recommen {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, .9);
+  width: 100%;
+}

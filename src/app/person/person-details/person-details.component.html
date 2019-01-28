@@ -1,0 +1,30 @@
+<main>
+  <div class="person-detail">
+    <app-person-overview [person]="_person"></app-person-overview>
+    <app-app-shortcut-nav></app-app-shortcut-nav>
+    <div class="row-content person-content">
+      <div class="grey-col">
+        <div class="grey-width">
+          <app-person-info [person]="_person"></app-person-info>
+        </div>
+      </div>
+      <div class="white-col">
+        <div class="white-width">
+          <div class="container">
+            <h3 class="fearture">Known For</h3>
+            <div *ngIf="credit" class="movie-list">
+
+              <div *ngFor="let cre of credit.cast | slice:0:6" class="movie-person-card">
+                <a routerLink="/movie/detail/{{cre.id}}">
+                  <img class="image-fluid avartar" src="https://image.tmdb.org/t/p/w150_and_h225_bestv2{{cre.poster_path}}" alt="">
+                  <p class="movie-name-person">{{cre.title}}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

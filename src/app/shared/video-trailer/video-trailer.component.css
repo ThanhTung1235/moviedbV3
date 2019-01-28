@@ -1,0 +1,10 @@
+.video-trailer {
+  white-space: nowrap;
+  overflow: auto;
+  margin: 10px 0 20px 0;
+}
+
+.trailer-item {
+  width: 560px;
+  display: inline-block;
+}

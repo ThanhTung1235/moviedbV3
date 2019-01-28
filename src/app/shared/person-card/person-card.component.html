@@ -1,0 +1,14 @@
+<div *ngFor="let people of personResponse?.results" class="person-card">
+  <a routerLink="/person/details/{{people.id}}">
+    <div class="person-thumbnail" [ngStyle]="{'background-image': 'url('+ urlImage + people.profile_path+ ')'}"
+         title="{{people.name}}"></div>
+    <div class="person-info">
+      <p>{{people.name}}</p>
+      <p >
+        <span *ngFor="let knownFor of people.known_for">
+        {{knownFor.title}},
+        </span>
+        </p>
+    </div>
+  </a>
+</div>

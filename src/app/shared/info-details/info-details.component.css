@@ -1,0 +1,53 @@
+.nav-social {
+  display: flex;
+  padding: 20px 20px 0 20px;
+}
+
+.border-r {
+  border-right: 1px solid #D7D7D7;
+  margin-right: 5px;
+}
+
+.social-link {
+  color: #081c24;
+  padding-right: 8px;
+}
+
+.movie_about, #keyword {
+  padding: 0 20px;
+}
+
+.column_grey .title-feature {
+  margin-top: 30px;
+}
+
+p.title-feature {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.genres-item {
+  background: white;
+  padding: 5px;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: auto;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  color: #081c24;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.genres {
+  margin-left: 20px;
+}
+
+.genres .genres-item {
+  text-transform: unset;
+}
+
+.item-feature {
+  margin: 10px 0;
+}

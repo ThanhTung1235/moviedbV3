@@ -1,0 +1,114 @@
+<div class="detail-page" *ngIf="movie">
+  <div class="banner" [ngStyle]="{'background-image': 'url('+ urlImage + movie.backdrop_path + ')'}"></div>
+  <div class="detail-header">
+    <div class="container">
+      <div class="row intro">
+        <div class="col-4">
+          <div class="thumbnail-movie-dt">
+            <a data-fancybox="test" href="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}">
+              <img class="image-fluid" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}"
+                   alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div>
+            <h1>{{movie.title}}</h1>
+            <ul class="nav media-dt">
+              <li class="nav-item">
+                <img class="image-fluid" src="../../assets/Capture.png" alt="">
+              </li>
+              <li class="nav-item">
+                <a class="media-action" href="#">
+                  <i class="fas fa-list"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="media-action" href="#">
+                  <i class="fas fa-heart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="media-action" href="#">
+                  <i style="padding-left: 15px" class="fas fa-bookmark"></i>
+                </a>
+              </li>
+              <li *ngFor="let trailer of video?.results | slice:0:1" title="play trailer" class="nav-item"
+                  style="margin-top:12px">
+                <a class="trailer" data-fancybox="trailer" [href]="youtubeUrl + trailer.key">
+                  <i class="fas fa-play"></i>
+                  play trailer
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="overview-dt">
+            <h3 class="title-section">Overview</h3>
+            <p>
+              {{movie.overview}}
+            </p>
+          </div>
+          <div class="fearture-dt">
+            <h3 class="title-section">Featured Crew</h3>
+            <ul class="item-section">
+              <li><b>Stephen McFeely</b></li>
+              <li>Screenplay, Writer</li>
+            </ul>
+            <ul class="item-section">
+              <li><b>Anthony Russo</b></li>
+              <li>Director</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="detail-header-mb">
+    <div class="banner-mb">
+      <img class="image-fluid" src="https://image.tmdb.org/t/p/w1400_and_h450_face{{movie.backdrop_path}}" alt="">
+      <img class="image-fluid poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}"
+           alt="">
+    </div>
+    <div class="title-dt-mb">
+      <div class="container">
+        <h1 class="movie-dt-name">{{movie.title}}</h1>
+        <div class="media-dt-mb">
+          <a href="#" class="percent-mb">
+            <div class="percent-fake">
+              <img class="image-fluid" src="../../assets/Capture.png" alt="">
+            </div>
+            <p class="User-Score">User Score</p>
+          </a>
+          <div class="border"></div>
+          <div *ngFor="let trailer of video?.results | slice:0:1" class="trailer-mb">
+            <a class="trailer" data-fancybox="trailer-mb" [href]="youtubeUrl + trailer.key">
+              <i class="fas fa-play"></i>
+              play trailer
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overview-mb">
+      <div class="container">
+        <div class="overview-dt">
+          <h3 class="title-section">Overview</h3>
+          <p>
+            {{movie.overview}}
+          </p>
+        </div>
+        <div class="fearture-dt">
+          <h3 class="title-section">Featured Crew</h3>
+          <ul class="item-section">
+            <li><b>Stephen McFeely</b></li>
+            <li>Screenplay, Writer</li>
+          </ul>
+          <ul class="item-section">
+            <li><b>Anthony Russo</b></li>
+            <li>Director</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

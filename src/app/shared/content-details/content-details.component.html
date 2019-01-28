@@ -1,0 +1,50 @@
+<div class="content-movie-details">
+  <div class="row-content">
+    <div class="white-col">
+      <div class="white-width">
+
+      </div>
+      <div class="clear-both"></div>
+      <div *ngIf="movie?.belongs_to_collection" class="collection">
+        <div class="thumbnail-collection"
+             [ngStyle]="{'backgroundImage': 'url('+ imgCollection + movie.belongs_to_collection.backdrop_path + ')'}"></div>
+        <div class="panel">
+          <div class="white-width">
+            <div class="pd-1">
+              <h2 class="title-collection">{{movie.belongs_to_collection.name}}</h2>
+              <p class="info-collection">Includes Mission: Impossible, Mission: Impossible II, Mission: Impossible
+                III</p><a href="#" class="btn-collection">view the collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white-width">
+        <div class="recommend-area">
+          <h2>Recommendation</h2>
+          <div *ngIf="recommend" class="recommendation">
+            <div *ngFor="let red of recommend.results" class="recommen-card">
+              <a routerLink="/detail/{{red.id}}">
+                <div class="thumbnail-recommen">
+                  <img class="image-fluid image-radius"
+                       src="https://image.tmdb.org/t/p/w250_and_h141_face{{red.backdrop_path}}" alt="">
+                  <div class="sub-recommen">
+                    <i class="fas fa-table"></i> {{red.release_date}}
+                  </div>
+                </div>
+                <div class="recommen-name">
+                  <p>{{red.title}}</p>
+                  <p>{{red.vote_average}}<i class="fas fa-star"></i></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grey-col">
+      <div class="grey-width">
+
+      </div>
+    </div>
+  </div>
+</div>

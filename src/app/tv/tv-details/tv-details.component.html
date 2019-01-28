@@ -1,0 +1,38 @@
+<app-banner-details [movie]="_movie" [video]="_videos"></app-banner-details>
+<div class="content-movie-details">
+  <div class="row-content">
+    <div class="white-col">
+      <div class="white-width">
+        <div class="container">
+          <app-top-cast [credits]="_credits"></app-top-cast>
+          <app-video-trailer [videos]="_videos"></app-video-trailer>
+        </div>
+      </div>
+      <div class="clear-both"></div>
+      <div *ngIf="_movie?.belongs_to_collection" class="collection">
+        <div class="thumbnail-collection"
+             [ngStyle]="{'backgroundImage': 'url('+ imgCollection + _movie?.belongs_to_collection.backdrop_path + ')'}"></div>
+        <div class="panel">
+          <div class="white-width">
+            <div class="pd-1">
+              <h2 class="title-collection">{{_movie.belongs_to_collection.name}}</h2>
+              <p class="info-collection">Includes Mission: Impossible, Mission: Impossible II, Mission: Impossible
+                III</p><a href="#" class="btn-collection">view the collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white-width">
+        <div class="container">
+          <app-recommendations-details [recommend]="_recommend" [master]="master"></app-recommendations-details>
+        </div>
+      </div>
+      <div class="clear-both"></div>
+    </div>
+    <div class="grey-col">
+      <div class="grey-width">
+        <app-info-details [movie]="_movie" [key]="_key"></app-info-details>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,166 @@
+<header>
+  <div class="container">
+    <div class="content-nav">
+      <div class="sub-small-mn">
+        <ul class="nav small-mn">
+          <li class="nav-item">
+            <a class="nav-link" href="#">App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Forums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LeaderBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contribute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="media-nav">
+        <ul class="nav left-mn">
+          <li class="logo">
+            <a routerLink="">
+              <img class="image-fluid" src="../../assets/Logo-sm.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Discover</a>
+            <ul class="nav sub-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/movie/popular">Movie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/tv/popular">TV Shows</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="nav-link">Movies</a>
+            <ul class="nav sub-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/movie/popular">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/movie/top-rate">Top Rated</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/movie/upcoming">Upcoming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/movie/now-playing">Now Playing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Tv Shows</a>
+            <ul class="nav sub-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/tv/popular">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/tv/top-rate">Top Rated</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/tv/on-tv">On Tv</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/tv/airing-today">Airing Today</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/person" href="">People</a>
+          </li>
+        </ul>
+        <ul class="nav right-mn">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-plus"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link multi-language" href="#">EN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <ul class="nav-m">
+        <li (click)="menu()" class="nav-m-item">
+          <i class="fas fa-bars"></i>
+        </li>
+        <li class="nav-m-item">
+          <div class="mobile-logo">
+            <a routerLink="">
+              <img class="image-fluid" src="../../assets/Logo-sm.png" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="nav-m-item">
+          <i class="fas fa-user"></i>
+        </li>
+      </ul>
+      <div id="toggle_Menu" class="menu-response">
+        <ul id="nav_mobile" class="d-none nav-mobile">
+          <li class="nav-mobile-item">
+            <a class="no_click text">Discover</a>
+            <ul class="sub-menu discover d-none">
+              <li><a class="item-link">Movies</a></li>
+              <li><a class="item-link">TV Shows</a></li>
+            </ul>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="no_click text" (click)="movie()">Movies</a>
+            <ul class="sub-menu-mb d-none movie">
+              <li><a class="item-link" routerLink="/popular">Popular</a></li>
+              <li><a class="item-link" routerLink="/top-rated">Top Rated</a></li>
+              <li><a class="item-link" routerLink="/upcoming">Upcoming</a></li>
+              <li><a class="item-link" routerLink="/now-playing">Now Playing</a></li>
+            </ul>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="no_click text" (click)="tv()">TV Shows</a>
+            <ul class="sub-menu-mb d-none tv">
+              <li><a class="item-link" routerLink="/tv">Popular</a></li>
+              <li><a class="item-link" routerLink="/tv">Top Rated</a></li>
+              <li><a class="item-link" routerLink="/tv">On TV</a></li>
+              <li><a class="item-link" routerLink="/tv">Airing Today</a></li>
+            </ul>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="no_click text" (click)="people()">People</a>
+            <ul class="sub-menu-mb people d-none">
+              <li><a class="item-link" routerLink="/person">Popular People</a></li>
+            </ul>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="text" href="/discuss">Discussions</a>
+          </li>
+          <ul class="lst-none nav-small pd-l2">
+            <li><a class="small-item" href="https://www.themoviedb.org/bible">Contribution Bible</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/apps">Apps</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/discuss">Forums</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/leaderboard">Leaderboard</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/contribute">Contribute</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/documentation/api">API</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/talk">Support</a></li>
+            <li><a class="small-item" href="https://www.themoviedb.org/about">About</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-search-box></app-search-box>
+</header>
+

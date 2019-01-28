@@ -1,0 +1,171 @@
+footer {
+  background-image: url('../../../assets/footer-bacground.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  height: 450px;
+}
+
+.content-ft {
+  padding-top: 50px;
+}
+
+.logo-footer {
+  float: right;
+  width: 130px;
+}
+
+.user-footer::after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+.btn_user {
+  float: right;
+  text-decoration: none;
+  color: #01D277;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600
+}
+
+.nav-footer {
+  list-style-type: none;
+}
+
+.nav-item-ft {
+  margin: 10px 0;
+}
+
+.nav-link-ft {
+  text-decoration: none;
+  color: white
+}
+
+.item-title-ft {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media only screen and (max-width: 992px) {
+  .col-sm {
+    width: 100%;
+  }
+
+  .offset-whitespace {
+    height: 37px;
+  }
+
+  .trailer-item iframe {
+    width: 100%;
+  }
+
+  /*home*/
+  .home-page {
+    margin-top: 98px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .movie-image {
+    display: none;
+  }
+
+  .content-info {
+    width: 100%;
+  }
+
+  /*mobile-nav  */
+  .content-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  /* footer-nav */
+  footer {
+    background: linear-gradient(to top right, #2455a9, #00d573);
+    height: auto;
+  }
+
+  .logo-footer, .btn_user {
+    float: unset;
+  }
+
+  .logo-footer {
+    margin-bottom: 15px
+  }
+
+  .user-footer {
+    margin-bottom: 30px;
+  }
+
+  .item-title-ft {
+    margin: 10px 0;
+  }
+
+  /* detail header */
+  .detail-header {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .detail-header-mb {
+    display: block;
+  }
+
+  /* content-detail */
+  .white-col {
+    float: unset;
+    width: 100%;
+  }
+
+  .grey-col {
+    float: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .white-width {
+    float: unset;
+    max-width: 100%;
+
+  }
+
+  .grey-width {
+    max-width: 100%;
+  }
+
+  /*person detail*/
+  .person-info-mb {
+    display: block;
+  }
+
+  .person-info {
+    display: none;
+  }
+
+  .movie-list {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  /*person-popular*/
+  .person_card {
+    width: 30%;
+  }
+}

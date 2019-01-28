@@ -1,0 +1,63 @@
+.person-detail {
+  padding-top: 50px;
+}
+
+.person-content .grey-col {
+  float: left;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.person-content .grey-width {
+  float: right;
+  padding-top: 30px;
+}
+
+.person-content {
+  height: auto;
+}
+
+.person-content .white-width {
+  float: unset;
+}
+
+.movie-person-card {
+  width: 25%;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.movie-person-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.movie-name-person {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-person-card img {
+  border-radius: 8px;
+}
+.movie-list,.fearture{
+  padding-left: 30px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .person-content .white-col{
+    float: left;
+  }
+  .movie-list {
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+  }
+  .movie-list,.fearture{
+    padding: 0;
+  }
+}

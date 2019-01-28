@@ -1,0 +1,50 @@
+.person-card {
+  width: 23%;
+  height: 23%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin: 9px;
+  display: inline-block;
+}
+.person-card a{
+  text-decoration: none;
+}
+.person-thumbnail {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 215px;
+  width: auto;
+}
+.person-info {
+  padding: 10px;
+}
+.person-info p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+}
+.person-info p:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  color: #4d4d4d;
+}
+@media only screen and (max-width: 992px) {
+  .person-card{
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .person-card{
+    width: 46%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .person-card{
+    width: 45%;
+  }
+}

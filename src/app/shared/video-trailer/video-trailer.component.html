@@ -1,0 +1,8 @@
+<h2>Videos</h2>
+<div *ngIf="videos" class="video-trailer">
+  <div *ngFor="let trailer of videos.results" class="trailer-item">
+    <iframe width="560" height="315" [src]="youtubeUrl + trailer.key | safe" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+</div>

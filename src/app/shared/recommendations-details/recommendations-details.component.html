@@ -1,0 +1,21 @@
+<div class="recommend-area">
+  <h2>Recommendation</h2>
+  <div *ngIf="recommend" class="recommendation">
+    <div *ngFor="let red of recommend.results" class="recommen-card">
+      <a routerLink="/{{_master}}/detail/{{red.id}}">
+        <div class="thumbnail-recommen">
+          <img class="image-fluid image-radius"
+               src="https://image.tmdb.org/t/p/w250_and_h141_face{{red.backdrop_path}}" alt="">
+          <div class="sub-recommen">
+            <i class="fas fa-table"></i> {{red.release_date}}
+          </div>
+        </div>
+        <div class="recommen-name">
+          <p>{{red?.title}}</p>
+          <p>{{red?.name}}</p>
+          <p>{{red.vote_average}}<i class="fas fa-star"></i></p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
