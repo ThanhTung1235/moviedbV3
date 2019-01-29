@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Search} from '../../model/search';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 import {SearchService} from '../../search/search.service';
 
 @Component({
@@ -47,7 +47,6 @@ export class SearchBoxComponent implements OnInit {
   }
 
   test(query) {
-    this.hide();
     this.route.navigate([`/search`], {queryParams: {query: this.keyword}});
   }
 

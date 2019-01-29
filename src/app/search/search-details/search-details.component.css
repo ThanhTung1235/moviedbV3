@@ -1,0 +1,54 @@
+.search-page {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.section-search:first-child {
+  border-top: 2px solid black;
+}
+
+.section-search {
+  border-bottom: 2px solid black;
+  padding: 12px 0;
+}
+
+.section-search a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.people-card {
+  margin-top: 20px;
+}
+
+.people-card:after {
+  clear: both;
+  height: 0;
+  content: '.';
+  display: block;
+  visibility: hidden;
+}
+
+.search-page .movie-card {
+  width: auto;
+}
+
+.image-people {
+  float: left;
+  width: 90px;
+  margin-right: 20px;
+}
+
+.image-people img {
+  border-radius: 8px;
+}
+
+.people-info {
+  padding-top: 15px;
+}
+
+.people-name a {
+  color: black;
+  text-decoration: none;
+}

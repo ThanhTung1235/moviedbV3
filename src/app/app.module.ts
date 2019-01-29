@@ -6,6 +6,8 @@ import {AppComponent} from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './container/home-page/home-page.component';
+import {FormsModule} from '@angular/forms';
+import {SearchModule} from './search/search.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomePageComponent } from './container/home-page/home-page.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

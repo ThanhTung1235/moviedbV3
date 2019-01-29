@@ -209,7 +209,9 @@ ul {
   max-width: 300px;
 }
 /*grey*/
-
+.movie-search .movie-card{
+  width: 100% !important;
+}
 @media only screen and (max-width: 992px) {
   .col-sm {
     width: 100%;
