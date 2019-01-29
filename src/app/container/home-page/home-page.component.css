@@ -1,0 +1,227 @@
+/*home page*/
+.home-page {
+    margin-top: 60px;
+  }
+  
+  .discussions {
+    background-image: radial-gradient(at 30% top, rgba(31, 40, 73, 1) 0%, rgba(8, 28, 36, 1) 70%);
+    display: block;
+    width: 100%;
+    height: 93px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .purple-image {
+    background-image: url('https://www.themoviedb.org/assets/1/v4/account_pipes/purple-63b164a075461641b7ef444ea97d9787adf45a9552fe215e20063e3ff02491a8.svg');
+    background-position: center;
+    background-position-y: 330px;
+    height: 93px;
+    padding: 20px 0;
+  }
+  
+  .title-content {
+    color: #ffffff;
+  }
+  
+  .purple-image a {
+    color: #805BE7;
+    text-decoration: none;
+  }
+  
+  .column {
+    display: inline-block;
+    width: 50%;
+    position: relative;
+  }
+  
+  .movie {
+    position: relative;
+  }
+  
+  .info-movie {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .movie-image {
+    width: 20%;
+    display: inline-block;
+  }
+  
+  .content-info {
+    width: 80%;
+    display: inline-block;
+    padding-left: 10px;
+    color: white;
+  }
+  
+  .title-movie {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  
+  .comment {
+    font-size: 14px;
+  }
+  
+  .feature-card {
+    display: flex;
+  }
+  .feature-info {
+    width: 55%;
+    margin-left: 10px;
+  }
+  .feature-info p:first-child{
+    color: #00d573;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  .feature-info p:last-child{
+    font-size: 13px;
+    padding-top: 5px;
+  }
+  .user-item{
+    margin-top: 10px;
+  }
+  .user-item a{
+    color: #00d573;
+    text-decoration: none;
+  }
+  .feature-list{
+    margin: 25px 0;
+  }
+  @media only screen and (max-width: 1200px) {
+  
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .col-sm {
+      width: 100%;
+    }
+  
+    .offset-whitespace {
+      height: 37px;
+    }
+  
+    .trailer-item iframe {
+      width: 100%;
+    }
+  
+    /*home*/
+    .home-page {
+      margin-top: 98px;
+    }
+  
+    .column {
+      width: 100%;
+    }
+  
+    .movie-image {
+      display: none;
+    }
+  
+    .content-info {
+      width: 100%;
+    }
+  
+    /*mobile-nav  */
+    .content-nav {
+      display: none;
+    }
+  
+    .mobile-nav {
+      display: block;
+    }
+  
+    /* footer-nav */
+    footer {
+      background: linear-gradient(to top right, #2455a9, #00d573);
+      height: auto;
+    }
+  
+    .logo-footer, .btn_user {
+      float: unset;
+    }
+  
+    .logo-footer {
+      margin-bottom: 15px
+    }
+  
+    .user-footer {
+      margin-bottom: 30px;
+    }
+  
+    .item-title-ft {
+      margin: 10px 0;
+    }
+  
+    /* detail header */
+    .detail-header {
+      display: none;
+    }
+  
+    .banner {
+      display: none;
+    }
+  
+    .detail-header-mb {
+      display: block;
+    }
+  
+    /* content-detail */
+    .white-col {
+      float: unset;
+      width: 100%;
+    }
+  
+    .grey-col {
+      float: unset;
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    .white-width {
+      float: unset;
+      max-width: 100%;
+  
+    }
+  
+    .grey-width {
+      max-width: 100%;
+    }
+  
+    /*person detail*/
+    .person-info-mb {
+      display: block;
+    }
+  
+    .person-info {
+      display: none;
+    }
+  
+    .movie-list {
+      overflow: auto;
+      white-space: nowrap;
+    }
+  
+    /*person-popular*/
+    .person_card {
+      width: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+  
+  }
+  
+  @media only screen and (max-width: 576px) {
+  
+  
+  }
+  
