@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './container/home-page/home-page.component';
 import {FormsModule} from '@angular/forms';
 import {SearchModule} from './search/search.module';
+import {NgxSpinnerComponent, NgxSpinnerModule} from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {SearchModule} from './search/search.module';
     SharedModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    SearchModule
+    SearchModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

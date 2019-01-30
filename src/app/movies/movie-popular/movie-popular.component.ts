@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {MediaResponse} from '../../model/media-response';
 import {MoviesService} from '../movies.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-movie-popular',
@@ -14,17 +15,13 @@ export class MoviePopularComponent implements OnInit {
   page = 1;
   master = 'movie';
 
-  constructor(private movieService: MoviesService,
-              private route: Router) {
+  constructor(
+    private movieService: MoviesService,
+    private route: Router,
+  ) {
   }
 
   ngOnInit() {
-    this.route.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
     this.getPopularMovie(this.page);
   }
 

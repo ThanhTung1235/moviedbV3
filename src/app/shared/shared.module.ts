@@ -41,7 +41,8 @@ import { AppShortcutNavComponent } from './app-shortcut-nav/app-shortcut-nav.com
     CommonModule,
     RouterModule,
     FormsModule
-  ], exports: [
+  ],
+  exports: [
     HeaderComponent,
     FooterComponent,
     SearchBoxComponent,

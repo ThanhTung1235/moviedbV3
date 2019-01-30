@@ -10,6 +10,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieTopRateComponent } from './movie-top-rate/movie-top-rate.component';
 import { MovieUpcomingComponent } from './movie-upcoming/movie-upcoming.component';
 import { MovieNowPlayingComponent } from './movie-now-playing/movie-now-playing.component';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 @NgModule({
   declarations: [MoviePopularComponent, MovieDetailComponent, MovieTopRateComponent, MovieUpcomingComponent, MovieNowPlayingComponent],
@@ -17,7 +18,8 @@ import { MovieNowPlayingComponent } from './movie-now-playing/movie-now-playing.
     CommonModule,
     MoviesRoutingModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    NgxSpinnerModule
   ]
 })
 export class MoviesModule {
