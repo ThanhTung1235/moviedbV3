@@ -4,12 +4,12 @@
       <div class="btn_search">
         <i class="fas fa-search"></i>
       </div>
-      <input [(ngModel)]="keyword" (keyup.enter)="test()" id="box" #box="ngModel" (keyup)="update(box.value)"
+      <input [(ngModel)]="keyword" (keyup.enter)="navigate()" id="box" #box="ngModel" (keyup)="update(box.value)"
              placeholder="search for a movie ,tv show,person..."
              class="search-input" type="text">
     </div>
   </div>
-  <div id="test" class="autocomplete-search">
+  <div  id="test" class="autocomplete-search">
     <div class="search-result" *ngFor="let results of searchs?.results | slice:0:10">
       <a (click)="hide()" routerLink="/movie/detail/{{results.id}}" class="result-item">
         <div class="container">

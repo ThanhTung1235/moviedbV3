@@ -6,6 +6,7 @@ import {Recommendations} from '../../model/recommendations';
 import {Videos} from '../../model/videos';
 import {Credits} from '../../model/credits';
 import {Media} from '../../model/media';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-movie-detail',
@@ -28,6 +29,7 @@ export class MovieDetailComponent implements OnInit {
     private detailService: MoviesService,
     private activatedRoute: ActivatedRoute,
     private route: Router,
+    private spinner: NgxSpinnerService,
   ) {
   }
 

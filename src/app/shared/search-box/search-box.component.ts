@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Search} from '../../model/search';
-import {NavigationEnd, Router} from '@angular/router';
-import {SearchService} from '../../search/search.service';
+import { Component, OnInit } from '@angular/core';
+import { Search } from '../../model/search';
+import { NavigationEnd, Router, NavigationStart } from '@angular/router';
+import { SearchService } from '../../search/search.service';
 
 @Component({
   selector: 'app-search-box',
@@ -13,6 +13,7 @@ export class SearchBoxComponent implements OnInit {
   value = '';
   searchs: Search;
   keyword = '';
+  bool = false;
 
 
   constructor(
@@ -46,8 +47,8 @@ export class SearchBoxComponent implements OnInit {
     test.classList.add('d-none');
   }
 
-  test(query) {
-    this.route.navigate([`/search`], {queryParams: {query: this.keyword}});
+  navigate(query) {
+    this.route.navigate([`/search`], { queryParams: { query: this.keyword } });
   }
 
 }

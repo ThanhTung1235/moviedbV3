@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MediaResponse} from '../../model/media-response';
 import {MoviesService} from '../movies.service';
 import {NavigationEnd, Router} from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-movie-now-playing',
@@ -15,7 +16,8 @@ export class MovieNowPlayingComponent implements OnInit {
   master = 'movie';
 
   constructor(private movieService: MoviesService,
-              private route: Router) {
+              private route: Router,
+              private spinner: NgxSpinnerService) {
   }
 
   ngOnInit() {

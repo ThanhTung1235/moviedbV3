@@ -48,7 +48,7 @@
   margin-top: 30px;
 }
 .row-content{
-  height: 175vh;
+  height: 140vh;
 }
 .row-content::after {
   clear: both;
