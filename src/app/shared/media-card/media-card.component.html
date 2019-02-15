@@ -9,8 +9,8 @@
   </div>
   <div class="card-content">
     <h3 class="movie-name">
-      <a routerLink="/detail/{{movie.id}}">{{movie?.title}}</a>
-      <a routerLink="/detail/{{movie.id}}">{{movie?.name}}</a>
+      <a routerLink="/{{masterName}}/detail/{{movie.id}}">{{movie?.title}}</a>
+      <a routerLink="/{{masterName}}/detail/{{movie.id}}">{{movie?.name}}</a>
     </h3>
     <p class="time">{{movie?.release_date}}</p>
     <p class="time">{{movie?.first_air_date}}</p>

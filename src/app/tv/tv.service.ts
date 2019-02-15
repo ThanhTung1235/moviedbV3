@@ -29,21 +29,21 @@ export class TvService {
   }
 
   getTopRate(page: number): Observable<MediaResponse> {
-    const url = `https://api.themoviedb.org/3/tv/top_rated?api_key=${this.apiKey}&language=en-US&${page}`;
+    const url = `https://api.themoviedb.org/3/tv/top_rated?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.httpClient.get<MediaResponse>(url).pipe(map(tv_response => {
       return tv_response as MediaResponse;
     }));
   }
 
   getOnTv(page: number): Observable<MediaResponse> {
-    const url = `https://api.themoviedb.org/3/tv/popular?api_key=${this.apiKey}&language=en-US&${page}`;
+    const url = `https://api.themoviedb.org/3/tv/popular?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.httpClient.get<MediaResponse>(url).pipe(map(tv_response => {
       return tv_response as MediaResponse;
     }));
   }
 
   getAiringToday(page: number): Observable<MediaResponse> {
-    const url = `https://api.themoviedb.org/3/tv/airing_today?api_key=${this.apiKey}&language=en-US&${page}`;
+    const url = `https://api.themoviedb.org/3/tv/airing_today?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.httpClient.get<MediaResponse>(url).pipe(map(tv_response => {
       return tv_response as MediaResponse;
     }));

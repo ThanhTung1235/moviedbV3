@@ -23,7 +23,6 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.http.get(url).pipe(
       map(response => {
-        console.log(response);
         return response as MediaResponse;
       })
     );
@@ -33,7 +32,6 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.http.get(url).pipe(
       map(response => {
-        console.log(response);
         return response as MediaResponse;
       })
     );
@@ -43,7 +41,6 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.http.get(url).pipe(
       map(response => {
-        console.log(response);
         return response as MediaResponse;
       })
     );
@@ -53,7 +50,6 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${this.apiKey}&language=en-US&page=${page}`;
     return this.http.get(url).pipe(
       map(response => {
-        console.log(response);
         return response as MediaResponse;
       })
     );

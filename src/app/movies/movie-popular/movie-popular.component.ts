@@ -1,23 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from '@angular/router';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {MediaResponse} from '../../model/media-response';
 import {MoviesService} from '../movies.service';
-import {NgxSpinnerService} from 'ngx-spinner';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-movie-popular',
   templateUrl: './movie-popular.component.html',
-  styleUrls: ['./movie-popular.component.css']
+  styleUrls: ['./movie-popular.component.css'],
 })
 export class MoviePopularComponent implements OnInit {
-
+  // _media: Observable<MediaResponse>;
   _media: MediaResponse;
   page = 1;
   master = 'movie';
 
   constructor(
-    private movieService: MoviesService,
-    private route: Router,
+    private movieService: MoviesService
   ) {
   }
 
@@ -30,6 +28,7 @@ export class MoviePopularComponent implements OnInit {
   }
 
   getPopularMovie(page: number): void {
+    // this._media = this.movieService.getMovie(page)
     this.movieService.getMovie(page).subscribe(x => this._media = x);
   }
 

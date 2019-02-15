@@ -19,12 +19,6 @@ export class TvAiringTodayComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
     this.getAiring(this.page);
   }
 
@@ -32,7 +26,7 @@ export class TvAiringTodayComponent implements OnInit {
     this.tvService.getAiringToday(event).subscribe(x => this._media = x);
   }
 
-  getAiring(page: number): void {
+  getAiring(page: number) {
     this.tvService.getAiringToday(page).subscribe(x => this._media = x);
   }
 

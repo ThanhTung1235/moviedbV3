@@ -127,13 +127,18 @@
   .movie-card-sm {
     display: inline-block;
     width: 48%;
-    margin: 6px;
+    margin: 8px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .movie-card-sm {
+    width: 100%;
+    margin: 8px 0;
   }
 }
 @media only screen and (max-width: 768px) {
   .movie-card-sm {
     width: auto;
-    margin: 10px;
   }
 }
 
