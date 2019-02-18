@@ -9,7 +9,7 @@
              class="search-input" type="text">
     </div>
   </div>
-  <div  id="test" class="autocomplete-search">
+  <div [hidden]="bool" id="test" class="autocomplete-search">
     <div class="search-result" *ngFor="let results of searchs?.results | slice:0:10">
       <a (click)="hide()" routerLink="/movie/detail/{{results.id}}" class="result-item">
         <div class="container">

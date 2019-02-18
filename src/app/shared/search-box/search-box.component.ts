@@ -14,8 +14,6 @@ export class SearchBoxComponent implements OnInit {
   searchs: Search;
   keyword = '';
   bool = false;
-
-
   constructor(
     private searchService: SearchService,
     private route: Router
@@ -49,6 +47,7 @@ export class SearchBoxComponent implements OnInit {
 
   navigate(query) {
     this.route.navigate([`/search`], { queryParams: { query: this.keyword } });
+    this.bool = true
   }
 
 }

@@ -1,10 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {PersonResponse} from '../../model/person-response';
 
 @Component({
   selector: 'app-person-card',
   templateUrl: './person-card.component.html',
-  styleUrls: ['./person-card.component.css']
+  styleUrls: ['./person-card.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PersonCardComponent implements OnInit {
   @Input() personResponse: PersonResponse;
