@@ -10,8 +10,10 @@
     </div>
   </div>
   <div id="test" [hidden]="bool" class="autocomplete-search">
-    <div class="search-result" *ngFor="let result of searchs?.results">
-      <a (click)="hide()" (keyup.enter)="hide()" routerLink="/movie/detail/{{result.id}}" class="result-item" #searchItem>
+    <div class="search-result" *ngFor="let result of searchs?.results; let i=index"
+         [ngClass]="{ 'ac': currentIndex == i}">
+      <a (click)="hide()" class="result-item" (keyup.enter)="hide()" routerLink="/movie/detail/{{result.id}}"
+         #searchItem>
         <div class="container">
           <span>
             <i class="fas fa-search"></i>

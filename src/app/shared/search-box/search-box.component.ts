@@ -14,10 +14,7 @@ export class SearchBoxComponent implements OnInit {
   searchs: Search;
   keyword = '';
   bool = true;
-  UP = 38;
-  DOWN = 40;
-  currentIndex = -1;
-  actived = 'background: #D7D7D7';
+  currentIndex = 0;
 
   constructor(
     private searchService: SearchService,
@@ -31,11 +28,12 @@ export class SearchBoxComponent implements OnInit {
   }
 
   ngOnInit() {
-    const a = document.getElementsByClassName('search-result')[this.currentIndex];
   }
 
   update(values: string) {
     console.log(values);
+    this.currentIndex = -1;
+    this.bool = false;
     const auto = document.getElementById('test');
     const overlay = document.getElementById('overlay');
     this.value = values;
@@ -51,9 +49,6 @@ export class SearchBoxComponent implements OnInit {
       auto.classList.add('d-none');
       return;
     };
-    this.bool = false;
-    this.currentIndex = -1;
-    console.log(this.currentIndex);
   }
 
   hide() {
@@ -68,10 +63,10 @@ export class SearchBoxComponent implements OnInit {
   }
 
   navigate(query) {
-    if (this.currentIndex !== -1) {
-      this.route.navigateByUrl('movie/detail/' + this.searchs.results[this.currentIndex].id);
-    } else {
+    if (this.currentIndex === -1) {
       this.route.navigate([`/search`], {queryParams: {query: this.keyword}});
+    } else {
+      this.route.navigateByUrl('movie/detail/' + this.searchs.results[this.currentIndex].id);
     }
 
   }
@@ -82,9 +77,6 @@ export class SearchBoxComponent implements OnInit {
     } else {
       this.currentIndex = 0;
     }
-    const a = document.getElementsByClassName('search-result')[this.currentIndex];
-    console.log(this.currentIndex);
-    a.classList.add('ac');
 
   }
 
@@ -94,12 +86,7 @@ export class SearchBoxComponent implements OnInit {
     } else {
       this.currentIndex = this.searchs.results.length - 1;
     }
-    const a = document.getElementsByClassName('search-result')[this.currentIndex];
-    console.log(this.currentIndex);
-    a.classList.add('ac');
-    if (this.currentIndex - 1 < this.currentIndex) {
-      a.classList.remove('ac');
-    }
+
   }
 
   UpToDown(event) {
