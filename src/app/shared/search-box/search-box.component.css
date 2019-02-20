@@ -7,6 +7,7 @@
   border-bottom: 1px solid #DEDEDE;
   border-top: 1px solid #DEDEDE;
   background: #ffffff;
+  position: relative;
 }
 
 .btn_search {
@@ -25,20 +26,40 @@
 
 .search-result {
   border-bottom: 1px solid #DEDEDE;
-  padding: 7px 0;
+  padding: 6px 0;
 }
 
 .result-item {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  font-size: 14px
 }
 
 .search-result:hover {
   background: #D7D7D7;
   transition: all 0.2s;
 }
+.ac{
+  background: #d7d7d7;
+  width: 100%;
+  height: 100%;
+}
 
 .autocomplete-search {
   background: #ffffff;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 47px;
 }
+.overlay{
+  background-color: transparent;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:none;
+}
+

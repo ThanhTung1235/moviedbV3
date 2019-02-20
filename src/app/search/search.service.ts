@@ -17,7 +17,6 @@ export class SearchService {
   searchMulti(keyword: string): Observable<Search> {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${keyword}`;
     return this.httpClient.get<Search>(url).pipe(map(search_response => {
-      console.log(search_response);
       return search_response as Search;
     }));
   }

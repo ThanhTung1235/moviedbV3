@@ -1,27 +1,27 @@
-<div class="search-box">
+<div class="search-box" (keyup.enter)="navigate()">
   <div class="container">
     <div class="search-nav">
       <div class="btn_search">
         <i class="fas fa-search"></i>
       </div>
-      <input [(ngModel)]="keyword" (keyup.enter)="navigate()" id="box" #box="ngModel" (keyup)="update(box.value)"
+      <input [(ngModel)]="keyword" id="box" #box="ngModel" (ngModelChange)="update(box.value)"
              placeholder="search for a movie ,tv show,person..."
-             class="search-input" type="text">
+             class="search-input" autocomplete="off" (keydown)="UpToDown($event)">
     </div>
   </div>
-  <div [hidden]="bool" id="test" class="autocomplete-search">
-    <div class="search-result" *ngFor="let results of searchs?.results | slice:0:10">
-      <a (click)="hide()" routerLink="/movie/detail/{{results.id}}" class="result-item">
+  <div id="test" [hidden]="bool" class="autocomplete-search">
+    <div class="search-result" *ngFor="let result of searchs?.results">
+      <a (click)="hide()" (keyup.enter)="hide()" routerLink="/movie/detail/{{result.id}}" class="result-item" #searchItem>
         <div class="container">
           <span>
             <i class="fas fa-search"></i>
           </span>
           <span>
-            {{results.title }}
+            {{result.title }}
           </span>
         </div>
       </a>
     </div>
   </div>
 </div>
-
+<div class="overlay" id="overlay" (click)="hideSuggest()"></div>

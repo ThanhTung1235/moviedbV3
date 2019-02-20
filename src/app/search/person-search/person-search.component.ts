@@ -2,11 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {SearhPerson} from '../../model/search';
 import {SearchService} from '../search.service';
 import {ActivatedRoute} from '@angular/router';
+import {fadeAnimation} from '../../router.animations';
 
 @Component({
   selector: 'app-person-search',
   templateUrl: './person-search.component.html',
-  styleUrls: ['./person-search.component.css']
+  styleUrls: ['./person-search.component.css'],
+  animations: [fadeAnimation],
 })
 export class PersonSearchComponent implements OnInit {
 

@@ -35,12 +35,6 @@ export class MovieDetailComponent implements OnInit {
 
 
   ngOnInit() {
-    this.route.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
     this.activatedRoute.params.subscribe(routeParams => {
       this.getMovie(routeParams.id);
       this.getCast(routeParams.id);

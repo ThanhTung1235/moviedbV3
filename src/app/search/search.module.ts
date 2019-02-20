@@ -7,13 +7,15 @@ import { PersonSearchComponent } from './person-search/person-search.component';
 import { TvSearchComponent } from './tv-search/tv-search.component';
 import { SearchDetailsComponent } from './search-details/search-details.component';
 import {SharedModule} from '../shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [MovieSearchComponent, PersonSearchComponent, TvSearchComponent, SearchDetailsComponent],
   imports: [
     CommonModule,
     SearchRoutingModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   exports: [SearchDetailsComponent]
 })
