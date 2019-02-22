@@ -5,7 +5,7 @@
       <app-media-card [media]="_media" [master]="master"></app-media-card>
     </div>
     <div class="paginate-nav">
-      <ngb-pagination [collectionSize]="_media?.total_pages * 10 |async" (pageChange)="pageChanged($event)"
+      <ngb-pagination [collectionSize]="_media?.total_pages * 10" (pageChange)="pageChanged($event)"
                       [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
     </div>
   </div>
