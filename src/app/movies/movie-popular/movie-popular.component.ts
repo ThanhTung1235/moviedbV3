@@ -24,11 +24,12 @@ export class MoviePopularComponent implements OnInit {
   }
 
   pageChanged(event) {
+    // this._media = this.movieService.getMovie(event);
     this.movieService.getMovie(event).subscribe(x => this._media = x);
   }
 
-  getPopularMovie(page: number): void {
-    // this._media = this.movieService.getMovie(page)
+  getPopularMovie(page: number) {
+    // this._media = this.movieService.getMovie(page);
     this.movieService.getMovie(page).subscribe(x => this._media = x);
   }
 
